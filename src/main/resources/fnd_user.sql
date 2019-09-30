@@ -11,7 +11,7 @@
  Target Server Version : 50709
  File Encoding         : 65001
 
- Date: 30/09/2019 13:46:39
+ Date: 30/09/2019 14:32:11
 */
 
 SET NAMES utf8mb4;
@@ -25,7 +25,7 @@ CREATE TABLE `fnd_user`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '姓名',
   `age` int(11) DEFAULT NULL COMMENT '年龄',
-  `created_time` datetime(0) DEFAULT NULL COMMENT '创建时间',
+  `created_time` datetime(0) DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
   `updated_time` datetime(0) DEFAULT NULL COMMENT '修改时间',
   `price` decimal(16, 2) DEFAULT NULL COMMENT '货币类型',
   `summary` text CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT '简述',
